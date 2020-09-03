@@ -1,10 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigationContainer} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import ScreenOne from '../screens/ScreenOne';
-import ScreenTwo from '../screens/ScreenTwo';
-import ScreenThree from '../screens/ScreenThree';
 import Settings from '../screens/Settings';
 import Location from '../screens/Location/indes';
 import Chat from '../screens/Chat/indes';
@@ -32,7 +28,7 @@ function Tabs() {
         }}
         component={Location}
       />
-            <Tab.Screen
+      <Tab.Screen
         name="Chat"
         options={{
           tabBarIcon: ({color, size}) => (
@@ -46,9 +42,7 @@ function Tabs() {
 }
 
 function BottomTabNavigator() {
-  return (
-      <Tabs />
-  );
+  return <Tabs />;
 }
 
 export default BottomTabNavigator;
