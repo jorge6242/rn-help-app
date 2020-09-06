@@ -33,7 +33,7 @@ export default function Toast() {
           right: 0,
           justifyContent: 'center',
         }}>
-        <View style={{flex: 1, flexDirection: 'row'}}>
+        <View style={{flex: 1, flexDirection: 'row', marginTop: 10}}>
           <Text
             style={{
               marginLeft: 10,
