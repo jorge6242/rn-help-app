@@ -7,6 +7,7 @@ import Home from './src/containers/Home';
 import Login from './src/components/Login';
 import BottomTabNavigator from './src/navigation/BottomTabNavigatior';
 import CreateStore from './src/config/store';
+import Toast from './src/components/common/Toast';
 
 const store = CreateStore();
 const Stack = createStackNavigator();
@@ -26,6 +27,7 @@ function App() {
           <Stack.Screen name="TabNavigator" component={BottomTabNavigator} />
         </Stack.Navigator>
       </NavigationContainer>
+        <Toast />
     </Provider>
   );
 }

@@ -27,7 +27,6 @@ const loginReducer = (state = initialState, action: ActionTypes) => {
       };
     case ACTIONS.LOGOUT:
         AsyncStorage.removeItem("token");
-      //window.location.href = '/';
       return {
         ...state,
         ...initialState

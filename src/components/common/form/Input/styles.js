@@ -16,7 +16,7 @@ export default StyleSheet.create({
     field: {
       borderWidth: 1,
       margin: 10,
-      height: 60,
+      height: 45,
       borderRadius: 10,
       textDecorationLine: 'none',
       paddingLeft: 20,
@@ -25,7 +25,7 @@ export default StyleSheet.create({
     },
     input: {
         color: '#fff',
-        fontSize: 20
+        fontSize: 15
     }
   });
   

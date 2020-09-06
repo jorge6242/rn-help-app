@@ -6,6 +6,8 @@ export default StyleSheet.create({
     padding: 20,
     backgroundColor: '#00cec9',
     height: '100%',
+    backgroundColor: 'rgb(73,211,224)',
+    backgroundColor: 'linear-gradient(180deg, rgba(73,211,224,1) 0%, rgba(105,240,177,1) 100%)',
   },
   textTitle: {
     fontSize: 30,
@@ -41,17 +43,22 @@ export default StyleSheet.create({
     marginRight: 40,
     marginLeft: 40,
     marginTop: 10,
-    paddingTop: 20,
-    paddingBottom: 20,
-    backgroundColor: '#00cec9',
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: 'transparent',
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#fff',
+    height: 45,
   },
   submitText: {
     color: '#fff',
     textAlign: 'center',
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: 'bold',
   },
+  socialAuthContainer: {
+    display: "flex",
+    justifyContent: "flex-end",
+  }
 });

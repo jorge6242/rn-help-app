@@ -4,6 +4,7 @@ import { ACTIONS } from '../interfaces/actions/login';
 import AsyncStorage from '@react-native-community/async-storage';
 
 import Message from '../helpers/message';
+import setToast from './toast.action';
 
 interface IStore {
     dispatch: (someFunc: any) => void
@@ -30,6 +31,13 @@ export const login = (body: object) => async (dispatch: IStore['dispatch']) => {
         return authResponse;
     } catch (error) {
         const message = Message.exception(error);
+         setToast({
+             payload: {
+                 message,
+                 status: true,
+                 type: 'error',
+             },
+         })(dispatch);
         dispatch({ type: ACTIONS.LOADING, payload: false })
         throw message;
     }
