@@ -17,7 +17,6 @@ export const login = (body: object) => async (dispatch: IStore['dispatch']) => {
             status
         } = await Api.login(body);
         let authResponse: any = [];
-        console.log('data', data);
         if (status === 200 || status === 201) {
             authResponse = {
                 data,
@@ -30,15 +29,7 @@ export const login = (body: object) => async (dispatch: IStore['dispatch']) => {
         }
         return authResponse;
     } catch (error) {
-        let title = '';
         const message = Message.exception(error);
-        // snackBarUpdate({
-        //     payload: {
-        //         message: title,
-        //         status: true,
-        //         type: 'error',
-        //     },
-        // })(dispatch);
         dispatch({ type: ACTIONS.LOADING, payload: false })
         throw message;
     }

@@ -2,6 +2,7 @@ import React, {FunctionComponent} from 'react';
 import {View, Button, StyleSheet, Text} from 'react-native';
 import {Controller} from 'react-hook-form';
 import {TextInput} from 'react-native-gesture-handler';
+import styles from './styles';
 
 type PropFields = {
   control: any;
@@ -20,65 +21,42 @@ const Input: FunctionComponent<PropFields> = ({
   placeholder = '',
   secureText = false
 }) => {
+
+  const InputContainer = (props: any) => { 
+    const { onBlur, onChange, value } = props;
+    return (
+      <View style={styles.container}>
+        {error && (
+          <View style={styles.messageContainer}>
+            <Text style={styles.error}>
+              {error && error}
+            </Text>
+          </View>
+        )}
+        <View style={styles.field}>
+          <TextInput
+            onBlur={onBlur}
+            onChangeText={onChange}
+            value={value}
+            placeholder={placeholder}
+            secureTextEntry={secureText}
+            style={styles.input}
+            placeholderTextColor="#fff"
+          />
+        </View>
+      </View>
+    )}
+
+
   return (
     <Controller
       control={control}
-      render={({onChange, onBlur, value}) => (
-        <View style={styles.container}>
-          {error && (
-            <View style={styles.messageContainer}>
-              <Text style={styles.error}>
-                {error && error}
-              </Text>
-            </View>
-          )}
-          <View style={styles.field}>
-            <TextInput
-              onBlur={onBlur}
-              onChangeText={(value) => onChange(value)}
-              value={value}
-              placeholder={placeholder}
-              secureTextEntry={secureText}
-              style={styles.input}
-              placeholderTextColor="#fff"
-            />
-          </View>
-        </View>
-      )}
+      render={InputContainer}
       name={name}
       rules={{required: required ? 'Requerido' : false}}
       defaultValue=""
     />
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-  },
-  messageContainer: {
-    margin: 10,
-    marginTop: 0,
-    marginBottom: 0,
-  },
-  error: {
-    color: 'red',
-    fontWeight: 'bold',
-  },
-  field: {
-    borderWidth: 1,
-    margin: 10,
-    height: 50,
-    borderRadius: 10,
-    textDecorationLine: 'none',
-    paddingLeft: 20,
-    paddingRight: 20,
-    borderColor: '#fff'
-  },
-  input: {
-      color: '#fff',
-      fontSize: 20
-  }
-});
 
 export default Input;
