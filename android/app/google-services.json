@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "539909442923",
+    "firebase_url": "https://app-help-62efe.firebaseio.com",
+    "project_id": "app-help-62efe",
+    "storage_bucket": "app-help-62efe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539909442923:android:638e07494f35924c94502e",
+        "android_client_info": {
+          "package_name": "com.reactnativehelpapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539909442923-15kalu7krbdl8073q9itncg1h8792fvl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reactnativehelpapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "539909442923-2a7luagejcr622g09mof3ngu0f8n9uov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuYVA-tvwwMciyR6EZkBnP-MzxL03WVZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539909442923-2a7luagejcr622g09mof3ngu0f8n9uov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
